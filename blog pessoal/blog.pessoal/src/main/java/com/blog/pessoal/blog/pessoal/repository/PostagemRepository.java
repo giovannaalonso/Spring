@@ -10,5 +10,5 @@ public interface PostagemRepository extends CrudRepository<Postagem, Long>{
 	
 	List<Postagem> findAll();
 	Postagem findById( long id);
-	Postagem findByTitulo (String titulo);
+	List<Postagem>findByTitulo (String titulo);
 }
