@@ -1,4 +1,4 @@
-package com.example.minha.loja.de.games.controller;
+	package com.example.minha.loja.de.games.controller;
 
 import java.util.List;
 
