@@ -52,3 +52,13 @@ public class UsuarioRepositoryTest {
 		assertTrue(listaDeUsuarios.get(2).getNome().equals("Teste03"));
 }
 }
+
+
+
+
+
+
+
+
+
+
