@@ -10,6 +10,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.header.writers.StaticHeadersWriter;
 
 @EnableWebSecurity
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -36,7 +37,9 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		.and().httpBasic()
 		.and ().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and ().cors()
-		.and().csrf().disable();
+		.and().csrf().disable()
+		.headers().addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Origin","*"));
+		
 				
 	}
 }

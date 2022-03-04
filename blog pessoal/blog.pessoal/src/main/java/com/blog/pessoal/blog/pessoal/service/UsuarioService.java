@@ -32,6 +32,7 @@ public class UsuarioService {
 		Optional<Usuario> usuario = repository.findByUsuario(user.get().getUsuario());
 		
 		if (usuario.isPresent()) {
+			
 			if(encoder.matches(user.get().getSenha(), usuario.get().getSenha())) {
 				
 				String auth = user.get() + ":" + user.get().getSenha();
@@ -39,11 +40,17 @@ public class UsuarioService {
 				String authHeader = "Basic " + new String(encodeAuth);
 				
 				user.get().setToken(authHeader);
+				user.get().setId(usuario.get().getId());
+				//linha 43 está diferente dá apresentada no vídeo de integração back e frontend
 				user.get().setNome(usuario.get().getNome());
+				user.get().setFoto(usuario.get().getFoto());
+				user.get().setTipo(usuario.get().getTipo());
+				
 			}
 		}
 		
-		return null;
+		//return null;
+		return user;
 	}
 	
 }

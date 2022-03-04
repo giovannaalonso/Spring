@@ -7,13 +7,26 @@ public class UsuarioLogin {
 	private String usuario;
 	private String senha;
 	private String token;
-	
+	private String foto;
+	private String tipo;
 	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	public String getUsuario() {
 		return usuario;
@@ -32,6 +45,10 @@ public class UsuarioLogin {
 	}
 	public void setToken(String token) {
 		this.token = token;
+	}
+	public void setId(long id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
