@@ -29,9 +29,9 @@ public class Usuario {
 	@Size(min=2, max = 100)
 	private String nome;
 		
-	@Schema(example = "email@email.com.br") 
+	//@Schema(example = "email@email.com.br") 
 	@NotNull
-	@Email(message = "O atributo Usuário deve ser um email válido!") 
+	//@Email(message = "O atributo Usuário deve ser um email válido!") 
 	private String usuario;
 	
 	@NotNull
